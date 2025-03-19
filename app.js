@@ -12,7 +12,7 @@ const authMiddleware = require("./Middleware/AuthMiddleware");
 const userRoutes = require("./Routes/usersRoute");
 
 // user routes middleware 
-app.use("/api/users", authMiddleware, userRoutes);
+app.use("/api/users", userRoutes);
 
 
 
@@ -34,7 +34,6 @@ app.use("/api/answer", authMiddleware, answerRoutes);
 async function start() {
   try {
     const [result] = await dbConnection.execute("select 'test' ");
-    // console.log(result)
     app.listen(5001);
     console.log(`database connection established`);
     console.log('listening on 5001 port')
