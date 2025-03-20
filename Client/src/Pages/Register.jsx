@@ -37,8 +37,7 @@ async function handleSubmit(e) {
     alert("register successfull, please login");
     navigate("/login");
   } catch (error) {
-    alert("something went wrong")
-    // console.log(error.response);
+    alert(error?.response?.data?.msg);
   }
 }
 
