@@ -67,7 +67,7 @@ try {
          expiresIn: "30d",
        });
 
-   return res.status(StatusCodes.OK).json({msg: "user login successful", token})
+   return res.status(StatusCodes.OK).json({msg: "user login successful", token, username})
 
   
 } catch (error) {
